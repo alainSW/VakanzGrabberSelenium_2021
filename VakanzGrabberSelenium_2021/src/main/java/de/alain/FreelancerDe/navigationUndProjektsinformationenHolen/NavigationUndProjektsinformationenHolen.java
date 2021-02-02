@@ -294,7 +294,7 @@ public class NavigationUndProjektsinformationenHolen extends BaseHtmlControl {
 					Projektmerkmale.projektTitle(), Projektmerkmale.geplanterStart(),
 					Projektmerkmale.voraussichtlichesEnde(), Projektmerkmale.projektOrt(),
 					Projektmerkmale.stundenSatz(), Projektmerkmale.remote(), Projektmerkmale.letzteUpdate(),
-					refenrenzNummer, Projektmerkmale.projektbeschreibung());
+					refenrenzNummer, Projektmerkmale.projektbeschreibung().replace("'", ""));
 
 			// System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 +
 			// prokektNummer - 1]);
@@ -310,7 +310,7 @@ public class NavigationUndProjektsinformationenHolen extends BaseHtmlControl {
 					Projektmerkmale.projektTitle(), Projektmerkmale.geplanterStart(),
 					Projektmerkmale.voraussichtlichesEnde(), Projektmerkmale.projektOrt(),
 					Projektmerkmale.stundenSatz(), Projektmerkmale.remote(), refenrenzNummer,
-					Projektmerkmale.letzteUpdate(), Projektmerkmale.projektbeschreibung());
+					Projektmerkmale.letzteUpdate(), Projektmerkmale.projektbeschreibung().replace("'", ""));
 
 			// System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 +
 			// prokektNummer - 1]);
@@ -326,7 +326,7 @@ public class NavigationUndProjektsinformationenHolen extends BaseHtmlControl {
 					Projektmerkmale.projektTitle(), Projektmerkmale.geplanterStart(),
 					Projektmerkmale.voraussichtlichesEnde(), Projektmerkmale.projektOrt(), refenrenzNummer,
 					Projektmerkmale.stundenSatz(), Projektmerkmale.remote(), Projektmerkmale.letzteUpdate(),
-					Projektmerkmale.projektbeschreibung());
+					Projektmerkmale.projektbeschreibung().replace("'", ""));
 			// System.out.println(projektInformationen[(projektMaskeNummer - 1) * 20 +
 			// prokektNummer - 1]);
 			return;

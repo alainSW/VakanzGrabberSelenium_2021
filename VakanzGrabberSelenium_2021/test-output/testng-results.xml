@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-29T14:42:28 CET" name="Suite" finished-at="2021-01-29T14:44:11 CET" duration-ms="102564">
+  <suite started-at="2021-02-02T13:27:53 CET" name="Suite" finished-at="2021-02-02T13:29:29 CET" duration-ms="96293">
     <groups>
     </groups>
-    <test started-at="2021-01-29T14:42:28 CET" name="Test" finished-at="2021-01-29T14:44:11 CET" duration-ms="102564">
+    <test started-at="2021-02-02T13:27:53 CET" name="Test" finished-at="2021-02-02T13:29:29 CET" duration-ms="96293">
       <class name="de.alain.FreelancerDe.testCase.TestCases">
-        <test-method is-config="true" signature="setUpFramework()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:42:28 CET" name="setUpFramework" finished-at="2021-01-29T14:42:28 CET" duration-ms="46" status="PASS">
+        <test-method is-config="true" signature="setUpFramework()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:27:53 CET" name="setUpFramework" finished-at="2021-02-02T13:27:53 CET" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpFramework -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:42:28 CET" name="beforeMethod" finished-at="2021-01-29T14:42:37 CET" duration-ms="8604" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:27:53 CET" name="beforeMethod" finished-at="2021-02-02T13:28:00 CET" duration-ms="6454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="prozessLogikAbwicklung(java.util.Hashtable, java.lang.reflect.Method)[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:42:37 CET" name="prozessLogikAbwicklung" data-provider="data" finished-at="2021-01-29T14:43:18 CET" duration-ms="41077" status="PASS">
+        <test-method signature="prozessLogikAbwicklung(java.util.Hashtable, java.lang.reflect.Method)[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:28:00 CET" name="prozessLogikAbwicklung" data-provider="data" finished-at="2021-02-02T13:28:44 CET" duration-ms="44547" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -31,7 +31,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prozessLogikAbwicklung -->
-        <test-method signature="prozessLogikAbwicklung(java.util.Hashtable, java.lang.reflect.Method)[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:43:18 CET" name="prozessLogikAbwicklung" data-provider="data" finished-at="2021-01-29T14:43:56 CET" duration-ms="38614" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:28:44 CET" name="beforeMethod" finished-at="2021-02-02T13:28:44 CET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="prozessLogikAbwicklung(java.util.Hashtable, java.lang.reflect.Method)[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:28:44 CET" name="prozessLogikAbwicklung" data-provider="data" finished-at="2021-02-02T13:29:17 CET" duration-ms="32282" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,15 +51,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prozessLogikAbwicklung -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:43:18 CET" name="beforeMethod" finished-at="2021-01-29T14:43:18 CET" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:29:17 CET" name="beforeMethod" finished-at="2021-02-02T13:29:17 CET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:43:56 CET" name="beforeMethod" finished-at="2021-01-29T14:43:56 CET" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="prozessLogikAbwicklung(java.util.Hashtable, java.lang.reflect.Method)[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:43:56 CET" name="prozessLogikAbwicklung" data-provider="data" finished-at="2021-01-29T14:44:08 CET" duration-ms="11161" status="PASS">
+        <test-method signature="prozessLogikAbwicklung(java.util.Hashtable, java.lang.reflect.Method)[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:29:17 CET" name="prozessLogikAbwicklung" data-provider="data" finished-at="2021-02-02T13:29:26 CET" duration-ms="9932" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prozessLogikAbwicklung -->
-        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@efde75f]" started-at="2021-01-29T14:44:08 CET" name="EndTest" finished-at="2021-01-29T14:44:11 CET" duration-ms="3018" status="PASS">
+        <test-method is-config="true" signature="EndTest()[pri:0, instance:de.alain.FreelancerDe.testCase.TestCases@2e1ef60]" started-at="2021-02-02T13:29:26 CET" name="EndTest" finished-at="2021-02-02T13:29:29 CET" duration-ms="3008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndTest -->

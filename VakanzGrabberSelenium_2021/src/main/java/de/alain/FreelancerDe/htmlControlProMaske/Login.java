@@ -3,21 +3,21 @@
  * 
  * Beschreibung: Handling der Maske Login
  * 
- * Diese Klasse ermöglicht das Geschäftsprozesses der Login-Maske abzuwickeln.
+ * Diese Klasse ermueglicht das Geschueftsprozesses der Login-Maske abzuwickeln.
  * 
- * Folgende Aktionen werden durchgeführt: 
+ * Folgende Aktionen werden durchgefuehrt: 
  * 
- * - Überprüfung der Existenz des Login-Buttons
- * - Login-Buttons drücken
- * - Logout-Buttons drücken
- * - Überprüfung der Existenz des Email-Eingabefelders
- * - Überprüfung der Existenz des Passwort-Eingabefelders
- * - Überprüfung der Existenz des Checkbox eingeloggen Bleiben?
- * - Überprüfung der Existenz des Anmelde-Buttons
+ * - ueberpruefung der Existenz des Login-Buttons
+ * - Login-Buttons druecken
+ * - Logout-Buttons druecken
+ * - ueberpruefung der Existenz des Email-Eingabefelders
+ * - ueberpruefung der Existenz des Passwort-Eingabefelders
+ * - ueberpruefung der Existenz des Checkbox eingeloggen Bleiben?
+ * - ueberpruefung der Existenz des Anmelde-Buttons
  * - Email eingeben
  * - Passwort eingeben
  * - Passwort eingeben
- * - Checkbox eingeloggen Bleiben? abwählen
+ * - Checkbox eingeloggen Bleiben? abwuehlen
  *  
  *  
  * 
@@ -102,8 +102,8 @@ public class Login extends BaseHtmlControl {
 
 	}
 
-	// EmailEingabeFelder Existenz prüfen
-	public String EmailEingabeFelderExistenzPrüfen() {
+	// EmailEingabeFelder Existenz pruefen
+	public String EmailEingabeFelderExistenzPruefen() {
 
 		return selectgetText(emailEingabeFelderExist, 10);
 	}
@@ -125,13 +125,13 @@ public class Login extends BaseHtmlControl {
 
 	}
 
-	// PasswortEingabeFelder Existenz prüfen
-	public String PasswortEingabeFelderExistenzPrüfen() {
+	// PasswortEingabeFelder Existenz pruefen
+	public String PasswortEingabeFelderExistenzPruefen() {
 
 		return selectgetText(passwortEingabeFelderExist, 10);
 	}
 
-	// Checkbox: nicht eingeloggt bleiben auswählen
+	// Checkbox: nicht eingeloggt bleiben auswuehlen
 	public void eingeloggtBleiben() {
 		if (!getLoginText().equals("Login")) {
 			System.out.println("eingeloggt Bleiben Checkbox Not Exist");
@@ -143,13 +143,13 @@ public class Login extends BaseHtmlControl {
 
 	}
 
-	// eingeloggt bleiben Checkbox Existenz prüfen
-	public String EingeloggenBleibenCheckboxExistenzPrüfen() {
+	// eingeloggt bleiben Checkbox Existenz pruefen
+	public String EingeloggenBleibenCheckboxExistenzPruefen() {
 
 		return selectgetText(eingeloggenBleibenCheckboxExist, 10);
 	}
 
-	// Anmeldebutton drücken
+	// Anmeldebutton druecken
 	public void anmelden() {
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Anmelde-Button druecken " + "</b>");
 		if (!getLoginText().equals("Login")) {
@@ -165,13 +165,13 @@ public class Login extends BaseHtmlControl {
 
 	}
 
-	// AnmeldeButton Existenz prüfen
-	public String anmeldeButtonExistenzPrüfen() {
+	// AnmeldeButton Existenz pruefen
+	public String anmeldeButtonExistenzPruefen() {
 
 		return selectgetAttributByValue(anmeldeButtonExist, 10);
 	}
 
-	// Login-Button drücken
+	// Login-Button druecken
 	public void loginButtonDruecken() {
 
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Login-Button: druecken" + "</b>");
@@ -191,7 +191,7 @@ public class Login extends BaseHtmlControl {
 	// Textname: LoginButton entnehmen
 	public String getLoginText() {
 
-		return selectgetText(loginButton, 3);
+		return selectgetText(loginButton, 10);
 	}
 
 	// Ist man eingeloggt?
@@ -205,12 +205,12 @@ public class Login extends BaseHtmlControl {
 		return false;
 	}
 
-	// Willkommen-Listenfeld drücken
+	// Willkommen-Listenfeld druecken
 	public void willkommenUser() {
 		click(einloggenMessageVisible, 10);
 	}
 
-	// LogOut-Button drücken
+	// LogOut-Button druecken
 	public void logoutButton() {
 		click(logoutButton, 10);
 	}
@@ -231,7 +231,7 @@ public class Login extends BaseHtmlControl {
 		}
 	}
 
-	// Es wird geprüft, ob die Maske Login geladen ist?
+	// Es wird geprueft, ob die Maske Login geladen ist?
 	public void isLoginMaskeExist() {
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Login-Maske: Existenz pruefen " + "</b>");
 		new WebDriverWait(driver, 5);
@@ -242,10 +242,10 @@ public class Login extends BaseHtmlControl {
 		ExtentListeners.test.log(Status.INFO,
 				"<b>" + "Es wird geprueft, ob das Checkbox: Eingeloggt bleiben existiert." + "</b>");
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Es wird geprueft, ob der Button: Anmelde existiert." + "</b>");
-		if (EmailEingabeFelderExistenzPrüfen().equals("NUTZERNAME/E-MAIL")
-				&& PasswortEingabeFelderExistenzPrüfen().equals("PASSWORT")
-				&& EingeloggenBleibenCheckboxExistenzPrüfen().equals("Eingeloggt bleiben")
-				&& anmeldeButtonExistenzPrüfen().equals("Anmelden »")) {
+		if (EmailEingabeFelderExistenzPruefen().equals("NUTZERNAME/E-MAIL")
+				&& PasswortEingabeFelderExistenzPruefen().equals("PASSWORT")
+				&& EingeloggenBleibenCheckboxExistenzPruefen().equals("Eingeloggt bleiben")
+				&& anmeldeButtonExistenzPruefen().equals("Anmelden »")) {
 
 			System.out.println("Login Maske existiert!");
 			ExtentListeners.test.log(Status.PASS, "<b>" + "Login-Maske existiert!" + "</b>");
@@ -259,7 +259,7 @@ public class Login extends BaseHtmlControl {
 
 	}
 
-	// Fortfahren-Button drücken
+	// Fortfahren-Button druecken
 	public void fortfahrenButtonDruecken() {
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Fortfahren-Button: druecken" + "</b>");
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Es wird geprueft, ob der Fortfahren-Button exitiert" + "</b>");

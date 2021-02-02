@@ -36,7 +36,7 @@ public class TestCases extends SetUp {
 
 			// Cookies Handling
 			// ExtentListeners.test.log(Status.INFO, "Cookies bestaetigen");
-			cookiesHandling.iscookiesButtonExistAcceptButtonDrücken();
+			cookiesHandling.iscookiesButtonExistAcceptButtonDruecken();
 
 			// Aktion: Login
 			/*
@@ -44,6 +44,7 @@ public class TestCases extends SetUp {
 			 * login.isLoginButtonExist(); ExtentListeners.test.log(Status.PASS,
 			 * "Login-Button existiert");
 			 */
+
 			login.loginButtonDruecken();
 			login.isLoginMaskeExist(); // Es wird geprueft, ob die Maske-Login existiert
 			login.typeMail(email); // User-Name//E-Mail eingeben
@@ -95,7 +96,7 @@ public class TestCases extends SetUp {
 	 * 
 	 * // Cookies Handling // ExtentListeners.test.log(Status.INFO,
 	 * "Cookies bestaetigen");
-	 * cookiesHandling.iscookiesButtonExistAcceptButtonDrücken();
+	 * cookiesHandling.iscookiesButtonExistAcceptButtonDruecken();
 	 * 
 	 * // Aktion: Login
 	 * 

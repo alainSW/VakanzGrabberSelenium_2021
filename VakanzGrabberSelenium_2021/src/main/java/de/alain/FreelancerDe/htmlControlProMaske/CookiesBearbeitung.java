@@ -18,7 +18,7 @@ public class CookiesBearbeitung extends BaseHtmlControl {
 		// TODO Auto-generated constructor stub
 	}
 
-	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl bestätige')]")
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl bestätigen')]")
 	private WebElement cookiesButton;
 	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl bestätigen')]")
 	private WebElement cookiesButtonExist;
@@ -29,8 +29,8 @@ public class CookiesBearbeitung extends BaseHtmlControl {
 		click(cookiesButton, 10);
 	}
 
-	// cookiesButton Existenz prüfen
-	public String cookiesButtonExistPrüfen() {
+	// cookiesButton Existenz prï¿½fen
+	public String cookiesButtonExistPruefen() {
 		// System.out.println(selectgetText(cookiesButtonExist, 10));
 
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Es wird geprueft, ob der Cookies Button existiert" + "</b>");
@@ -38,13 +38,13 @@ public class CookiesBearbeitung extends BaseHtmlControl {
 	}
 
 	// Cookies Handling
-	public void iscookiesButtonExistAcceptButtonDrücken() {
+	public void iscookiesButtonExistAcceptButtonDruecken() {
 
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Cookies bestaetigen" + "</b>");
 
 		new WebDriverWait(driver, 3);
 
-		if (cookiesButtonExistPrüfen().equals("Auswahl bestätigen")) {
+		if (cookiesButtonExistPruefen().equals("Auswahl bestätigen")) {
 			System.out.println("Cookies-Button existiert");
 			ExtentListeners.test.log(Status.PASS, "<b>" + "Cookies-Button existiert" + "</b>");
 			cookiesButton();
