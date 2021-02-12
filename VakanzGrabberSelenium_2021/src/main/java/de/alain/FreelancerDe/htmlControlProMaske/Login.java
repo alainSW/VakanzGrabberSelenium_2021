@@ -40,7 +40,7 @@ public class Login extends BaseHtmlControl {
 
 	@FindBy(xpath = "//input[@id='username']")
 	private WebElement email;
-	@FindBy(xpath = "//body/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/label[1]")
+	@FindBy(xpath = "//input[@id='username']")
 	private WebElement emailEingabeFelderExist;
 
 	@FindBy(xpath = "//input[@id='password']")
@@ -50,12 +50,12 @@ public class Login extends BaseHtmlControl {
 
 	@FindBy(xpath = "//input[@id='remember']")
 	private WebElement eingeloggenBleiben;
-	@FindBy(xpath = "//body/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[5]/div[1]/div[1]/span[1]")
+	@FindBy(xpath = "//body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[5]/div[1]/div[1]/span[1]")
 	private WebElement eingeloggenBleibenCheckboxExist;
 
 	@FindBy(xpath = "//input[@id='login']")
 	private WebElement anmelden;
-	@FindBy(xpath = "//input[@id='login']")
+	@FindBy(xpath = "//body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[2]/form[1]/div[7]/input[1]")
 	private WebElement anmeldeButtonExist;
 
 	@FindBy(xpath = "//ul[@class='nav nav-pills hidden-xs']//a[@class='nav-top-link'][contains(text(),'Login')]")
@@ -103,9 +103,18 @@ public class Login extends BaseHtmlControl {
 	}
 
 	// EmailEingabeFelder Existenz pruefen
-	public String EmailEingabeFelderExistenzPruefen() {
+	public boolean EmailEingabeFelderExistenzPruefen() {
+		ExtentListeners.test.log(Status.INFO,
+				"<b>" + "Es wird geprueft, ob das Eingabefeld: Nutzername/E-Mail existiert." + "</b>");
 
-		return selectgetText(emailEingabeFelderExist, 10);
+		if (selectgetAttributById(emailEingabeFelderExist, 10).equals("username")) {
+			ExtentListeners.test.log(Status.INFO, "<b>" + "Das Eingabefeld: Nutzername/E-Mail existiert." + "</b>");
+			return true;
+		} else {
+			ExtentListeners.test.log(Status.FAIL,
+					"<b>" + "Das Eingabefeld: Nutzername/E-Mail existiert nicht!." + "</b>");
+			return false;
+		}
 	}
 
 	// Passwort eingeben
@@ -126,9 +135,18 @@ public class Login extends BaseHtmlControl {
 	}
 
 	// PasswortEingabeFelder Existenz pruefen
-	public String PasswortEingabeFelderExistenzPruefen() {
+	public boolean PasswortEingabeFelderExistenzPruefen() {
+		ExtentListeners.test.log(Status.INFO,
+				"<b>" + "Es wird geprueft, ob das Eingabefeld: Passwort> existiert." + "</b>");
 
-		return selectgetText(passwortEingabeFelderExist, 10);
+		selectgetText(passwortEingabeFelderExist, 10);
+		if (selectgetText(passwortEingabeFelderExist, 10).equals("PASSWORT")) {
+			ExtentListeners.test.log(Status.INFO, "<b>" + "Das Eingabefeld: Passwort existiert." + "</b>");
+			return true;
+		} else {
+			ExtentListeners.test.log(Status.FAIL, "<b>" + "Das Eingabefeld: Passwort existiert nicht." + "</b>");
+			return false;
+		}
 	}
 
 	// Checkbox: nicht eingeloggt bleiben auswuehlen
@@ -144,9 +162,18 @@ public class Login extends BaseHtmlControl {
 	}
 
 	// eingeloggt bleiben Checkbox Existenz pruefen
-	public String EingeloggenBleibenCheckboxExistenzPruefen() {
-
-		return selectgetText(eingeloggenBleibenCheckboxExist, 10);
+	public boolean EingeloggenBleibenCheckboxExistenzPruefen() {
+		ExtentListeners.test.log(Status.INFO,
+				"<b>" + "Es wird geprueft, ob das Checkbox: Eingeloggt bleiben existiert." + "</b>");
+		selectgetText(eingeloggenBleibenCheckboxExist, 10);
+		if (selectgetText(eingeloggenBleibenCheckboxExist, 10).equals("Eingeloggt bleiben")) {
+			ExtentListeners.test.log(Status.INFO, "<b>" + "Das Checkbox: Eingeloggt bleiben existiert." + "</b>");
+			return true;
+		} else {
+			ExtentListeners.test.log(Status.FAIL,
+					"<b>" + "Das Checkbox: Eingeloggt bleiben existiert nicht!." + "</b>");
+			return false;
+		}
 	}
 
 	// Anmeldebutton druecken
@@ -166,9 +193,17 @@ public class Login extends BaseHtmlControl {
 	}
 
 	// AnmeldeButton Existenz pruefen
-	public String anmeldeButtonExistenzPruefen() {
+	public boolean anmeldeButtonExistenzPruefen() {
+		ExtentListeners.test.log(Status.INFO, "<b>" + "Es wird geprueft, ob der Button: Anmelde existiert." + "</b>");
+		selectgetAttributByValue(anmeldeButtonExist, 10);
+		if (selectgetAttributByValue(anmeldeButtonExist, 10).equals("Anmelden »")) {
+			ExtentListeners.test.log(Status.INFO, "<b>" + "Der Button: Anmelden existiert." + "</b>");
+			return true;
+		} else {
+			ExtentListeners.test.log(Status.FAIL, "<b>" + "Der Button: Anmelde existiert nicht!." + "</b>");
+			return false;
+		}
 
-		return selectgetAttributByValue(anmeldeButtonExist, 10);
 	}
 
 	// Login-Button druecken
@@ -235,28 +270,15 @@ public class Login extends BaseHtmlControl {
 	public void isLoginMaskeExist() {
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Login-Maske: Existenz pruefen " + "</b>");
 		new WebDriverWait(driver, 5);
-		ExtentListeners.test.log(Status.INFO,
-				"<b>" + "Es wird geprueft, ob das Eingabefeld: Nutzername/E-Mail existiert." + "</b>");
-		ExtentListeners.test.log(Status.INFO,
-				"<b>" + "Es wird geprueft, ob das Eingabefeld: Passwort> existiert." + "</b>");
-		ExtentListeners.test.log(Status.INFO,
-				"<b>" + "Es wird geprueft, ob das Checkbox: Eingeloggt bleiben existiert." + "</b>");
-		ExtentListeners.test.log(Status.INFO, "<b>" + "Es wird geprueft, ob der Button: Anmelde existiert." + "</b>");
-		if (EmailEingabeFelderExistenzPruefen().equals("NUTZERNAME/E-MAIL")
-				&& PasswortEingabeFelderExistenzPruefen().equals("PASSWORT")
-				&& EingeloggenBleibenCheckboxExistenzPruefen().equals("Eingeloggt bleiben")
-				&& anmeldeButtonExistenzPruefen().equals("Anmelden »")) {
 
+		if (EmailEingabeFelderExistenzPruefen() == true && PasswortEingabeFelderExistenzPruefen() == true
+				&& EingeloggenBleibenCheckboxExistenzPruefen() == true && anmeldeButtonExistenzPruefen() == true) {
 			System.out.println("Login Maske existiert!");
 			ExtentListeners.test.log(Status.PASS, "<b>" + "Login-Maske existiert!" + "</b>");
-
 		} else {
-
 			System.out.println("Login Maske existiert nicht!");
 			ExtentListeners.test.log(Status.FAIL, "<b>" + "Loginmaske nicht existiert!" + "</b>");
-
 		}
-
 	}
 
 	// Fortfahren-Button druecken

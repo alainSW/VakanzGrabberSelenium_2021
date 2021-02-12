@@ -89,7 +89,7 @@ public class Projektsuche extends BaseHtmlControl {
 	// Projektsuche drücken
 	public void clickSuche() {
 		ExtentListeners.test.log(Status.INFO, "<b>" + "Suche-Button druecken" + "</b>");
-		ExtentListeners.test.log(Status.INFO, "<b>" + "Der Suchbutton wrd gedrueckt." + "</b>");
+		ExtentListeners.test.log(Status.INFO, "<b>" + "Der Suchbutton wird gedrueckt." + "</b>");
 		click(ProjektSucheButton, 10);
 		ExtentListeners.test.log(Status.PASS, "<b>" + "Suche-Button ist erfolgreich gedrueckt worden" + "</b>");
 	}

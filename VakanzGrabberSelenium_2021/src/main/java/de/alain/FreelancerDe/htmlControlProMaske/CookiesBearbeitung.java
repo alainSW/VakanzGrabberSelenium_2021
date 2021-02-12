@@ -18,9 +18,18 @@ public class CookiesBearbeitung extends BaseHtmlControl {
 		// TODO Auto-generated constructor stub
 	}
 
-	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl bestätigen')]")
+	// @FindBy(xpath =
+	// "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl
+	// bestätigen')]")
+	// private WebElement cookiesButton;
+	// @FindBy(xpath =
+	// "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl
+	// bestätigen')]")
+	// private WebElement cookiesButtonExist;
+
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/a[1]")
 	private WebElement cookiesButton;
-	@FindBy(xpath = "//div[@id='CybotCookiebotDialogBody']//div[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelectionWrapper']//a[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection'][contains(text(),'Auswahl bestätigen')]")
+	@FindBy(xpath = "//body[1]/div[1]/div[1]/a[1]")
 	private WebElement cookiesButtonExist;
 
 	// cookiesButtoneingeben
@@ -44,7 +53,7 @@ public class CookiesBearbeitung extends BaseHtmlControl {
 
 		new WebDriverWait(driver, 3);
 
-		if (cookiesButtonExistPruefen().equals("Auswahl bestätigen")) {
+		if (cookiesButtonExistPruefen().equals("Okay, verstanden »")) {
 			System.out.println("Cookies-Button existiert");
 			ExtentListeners.test.log(Status.PASS, "<b>" + "Cookies-Button existiert" + "</b>");
 			cookiesButton();
